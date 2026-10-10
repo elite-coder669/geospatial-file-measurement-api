@@ -26,7 +26,7 @@ Measurements use geodesic math directly on the WGS84 ellipsoid (via `pyproj.Geod
 
 ## 2. Dataset Choice
 
-For testing I picked the **Natural Earth Admin 0 – Countries** dataset (`ne_110m_admin_0_countries.*`), kept under `natural-earth-dataset/`. It turned out to be a solid stress test for three reasons:
+For testing I picked the **[Natural Earth Admin 0 – Countries](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/)** dataset (`ne_110m_admin_0_countries.*`), kept under `natural-earth-dataset/`. It turned out to be a solid stress test for three reasons:
 
 - **Real boundaries.** These are real country outlines, not synthetic squares, so every measurement could be sanity-checked against known values (Australia ≈ 7.69M km², Brazil ≈ 8.51M km²).
 - **Multiple geometry types.** The dataset mixes `Polygon` and `MultiPolygon` (island countries etc.), which made me exercise both geometry paths in the measurement code.
